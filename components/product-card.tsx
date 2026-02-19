@@ -52,7 +52,7 @@ export function ProductCard({ product }: ProductCardProps) {
             </p>
           )}
 
-          <div className="flex items-center justify-between mt-auto">
+          {/*<div className="flex items-center justify-between mt-auto">
             <span className="text-xl font-bold text-primary">
               ${product.price.toFixed(2)}
             </span>
@@ -64,7 +64,7 @@ export function ProductCard({ product }: ProductCardProps) {
               <ShoppingCart className="w-4 h-4" />
               <span className="hidden sm:inline ml-1">Add</span>
             </Button>
-          </div>
+          </div>*/}
         </div>
       </div>
     </Link>

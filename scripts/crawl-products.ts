@@ -49,9 +49,9 @@ async function crawlProduct(url: string): Promise<Product | null> {
       image = image.replace('/160w/', '/1280w/');
     }
     
-    // Get description
-    const description = $('.productView-description').text().trim().slice(0, 200) || 
-                       `Premium ${name} e-liquid from VapeRanger`;
+// Get description
+    const description = ($('.productView-description').text().trim().slice(0, 200) || 
+                       `Premium ${name}`).replace(' from VapeRanger', '');
     
     // Generate ID from URL
     const urlParts = url.split('/');
