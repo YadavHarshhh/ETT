@@ -18,7 +18,7 @@ nltk.download('averaged_perceptron_tagger')
 class ResumeProcessor:
     def __init__(self):
         # Initialize Groq API
-        api_key = os.getenv('GROQ_API_KEY', '***REMOVED***')
+        api_key = os.getenv('GROQ_API_KEY', '')
         self.client = Groq(api_key=api_key)
         self.stop_words = set(stopwords.words('english'))
         self.vectorizer = TfidfVectorizer()
@@ -188,7 +188,7 @@ class JobMatcher:
     def __init__(self):
         self.vectorizer = TfidfVectorizer()
         # Initialize Groq API for JobMatcher
-        api_key = os.getenv('GROQ_API_KEY', '***REMOVED***')
+        api_key = os.getenv('GROQ_API_KEY', '')
         self.client = Groq(api_key=api_key)
         
         # Global job categories and their typical requirements
